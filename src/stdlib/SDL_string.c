@@ -1001,7 +1001,7 @@ static const char ntoa_table[] = {
 char *SDL_itoa(int value, char *string, int radix)
 {
 #ifdef HAVE_ITOA
-    return itoa(value, string, radix);
+    return _itoa(value, string, radix);
 #else
     return SDL_ltoa((long)value, string, radix);
 #endif /* HAVE_ITOA */
